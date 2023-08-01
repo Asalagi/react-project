@@ -1,4 +1,36 @@
 body {
     background-color: lightgrey;
     margin: 0;
+    padding: 0;
+    height: 100%;
   }
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.container {
+  display: flex;
+  width: 100vh;
+  }
+.outer-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid black;
+  width: 100%;  
+  }
+.box {
+  background-color: blanchedalmond;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid black;
+}
+.cart {
+  margin: 5px;
+  font-size: 1rem;
+  text-align: right;
+}
