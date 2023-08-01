@@ -9,7 +9,7 @@ function HorseShop() {
       <header class="header">
         <h1>Welcome</h1>
         <p>This will be where horses can be bought</p>
-          <div class="cart"><p>Cart (0) $0</p></div>
+          <div class="cart"><button class="btn-cart">Cart (0) $0</button></div>
       </header>
       <div class="outer-box">
       <div class="box">
