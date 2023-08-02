@@ -10,8 +10,14 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/horseshop" element={<HorseShop setCartItems={setCartItems} />} />
-          <Route path="/horseshopCart" element={<ShoppingCart cartItems={cartItems} />} />
+          <Route
+            path="/horseshop"
+            element={<HorseShop cartItems={cartItems} setCartItems={setCartItems} />}
+          />
+          <Route
+            path="/horseshopCart"
+            element={<ShoppingCart cartItems={cartItems} />}
+          />
         </Routes>
       </div>
     </Router>

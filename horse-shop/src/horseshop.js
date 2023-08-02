@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './horse-shop.css';
 import horse1Image from './images/horse.jpg';
@@ -14,9 +14,7 @@ const HorseItem = ({ name, breed, imageUrl, addToCart }) => {
   );
 };
 
-function HorseShop() {
-  const [cartItems, setCartItems] = useState([]);
-
+function HorseShop({ cartItems, setCartItems }) {
   const handleAddToCart = (name) => {
     const newItem = {
       name: name,
@@ -27,7 +25,7 @@ function HorseShop() {
 
   const cartTotal = cartItems.length;
   const horseInfoData = [
-    { name: "Horse One", breed: "Quarter Horse", imageUrl: horse1Image }, 
+    { name: "Horse One", breed: "Quarter Horse", imageUrl: horse1Image },
     { name: "Horse Two", breed: "Paint Horse", imageUrl: horse1Image },
     { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
     { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
@@ -48,12 +46,12 @@ function HorseShop() {
       <div className="outerBox">
         <div className="grid">
           {horseInfoData.map((horse, index) => (
-            <HorseItem 
+            <HorseItem
               key={index}
               imageUrl={horse.imageUrl}
               name={horse.name}
               breed={horse.breed}
-              addToCart={() => handleAddToCart(horse.name)} 
+              addToCart={() => handleAddToCart(horse.name)}
             />
           ))}
         </div>
