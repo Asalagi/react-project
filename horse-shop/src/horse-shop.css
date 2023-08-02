@@ -12,17 +12,7 @@ body {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
 }
 
-.container {
-  background-color: #f1f1f1;
-  padding: 5px;
-  border-radius: 10px;
-  border: 0px solid #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-.grid {
+.horseCard {
   display: flex;
   flex-wrap: wrap; 
   gap: 20px;
@@ -93,6 +83,15 @@ body {
   color: white;
 }
 
+/* Cart page css */
+.container {
+  display: flex;
+  background-color: #f1f1f1;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+  align-items: left;
+}
 .btnShop {
   border: 1px solid #417743;
   background-color: #f4f4f4;
@@ -104,7 +103,33 @@ body {
 
 .btnShop:hover {
   background-color: #417743;
-
   color: white;
   font-weight: bold;
+}
+
+.summary {
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px dashed rgb(192, 36, 36);
+  width: 20%;
+}
+.summaryTitle {
+  margin: 0;
+  padding: 5px;
+  background-color: rgb(193, 188, 188);
+  border-bottom: 1px dashed rgb(192, 36, 36);;
+}
+.summaryBody {
+  background-color: #ffffff;
+  padding: 10px;
+  border: 0px solid black;
+}
+
+.container {
+  display: flex;
+  background-color: #f1f1f1;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+  align-items: left;
 }

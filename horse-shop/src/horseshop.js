@@ -40,7 +40,7 @@ function HorseShop({ cartItems, setCartItems }) {
         </div>
       </header>
       <div className="outerBox">
-        <div className="grid">
+        <div className="horseCard">
           {        horseInfoData.map((horse) => (
           <HorseItem
             key={horse.id}
