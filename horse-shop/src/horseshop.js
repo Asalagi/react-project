@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import './horse-shop.css';
 import horse1Image from './images/horse.jpg';
 
-const HorseItem = ({ name, breed, imageUrl, addToCart }) => {
+const HorseItem = ({ id, name, breed, imageUrl, addToCart }) => {
   return (
-    <div className="box">
+    <div className="box" id={id}>
       <img className="horse" src={imageUrl} alt={name} />
       <h2>{name}</h2>
       <p>{breed}</p>
@@ -15,21 +15,17 @@ const HorseItem = ({ name, breed, imageUrl, addToCart }) => {
 };
 
 function HorseShop({ cartItems, setCartItems }) {
-  const handleAddToCart = (name) => {
-    const newItem = {
-      name: name,
-    };
-
-    setCartItems([...cartItems, newItem]);
+  const handleAddToCart = (item) => {
+    setCartItems([...cartItems, item]);
   };
 
   const cartTotal = cartItems.length;
   const horseInfoData = [
-    { name: "Horse One", breed: "Quarter Horse", imageUrl: horse1Image },
-    { name: "Horse Two", breed: "Paint Horse", imageUrl: horse1Image },
-    { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
-    { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
-    { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
+    { id: 1, name: "Horse One", breed: "Quarter Horse", imageUrl: horse1Image },
+    { id: 2, name: "Horse Two", breed: "Paint Horse", imageUrl: horse1Image },
+    { id: 3, name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
+    { id: 4, name: "Horse Four", breed: "Appaloosa", imageUrl: horse1Image },
+    { id: 5, name: "Horse Five", breed: "Appaloosa", imageUrl: horse1Image },
   ];
 
   return (
@@ -45,16 +41,18 @@ function HorseShop({ cartItems, setCartItems }) {
       </header>
       <div className="outerBox">
         <div className="grid">
-          {horseInfoData.map((horse, index) => (
-            <HorseItem
-              key={index}
-              imageUrl={horse.imageUrl}
-              name={horse.name}
-              breed={horse.breed}
-              addToCart={() => handleAddToCart(horse.name)}
-            />
-          ))}
-        </div>
+          {        horseInfoData.map((horse) => (
+          <HorseItem
+            key={horse.id}
+            id={horse.id}
+            imageUrl={horse.imageUrl}
+            name={horse.name}
+            breed={horse.breed}
+            addToCart={() => handleAddToCart(horse)}
+          />
+        ))
+      }
+    </div>
       </div>
     </div>
   );
