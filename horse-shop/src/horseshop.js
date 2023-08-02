@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './horse-shop.css';
 import horse1Image from './images/horse.jpg'
 
@@ -38,7 +39,9 @@ function HorseShop() {
         <h1>Welcome</h1>
         <p>This will be where horses can be bought</p>
           <div class="cart">
-            <button class="btnCart">Cart ({cartTotal})</button>
+          <Link to="/horseshopCart">
+            <button className="btnCart">Cart ({cartTotal})</button>
+          </Link>
             </div>
       </header>
       <div class="outerBox">
