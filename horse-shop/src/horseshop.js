@@ -28,6 +28,8 @@ function HorseShop() {
     { name: "Horse One", breed: "Quarter Horse", imageUrl: horse1Image }, 
     { name: "Horse Two", breed: "Paint Horse", imageUrl: horse1Image },
     { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
+    { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
+    { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
   ];
 
   return (
@@ -40,6 +42,7 @@ function HorseShop() {
             </div>
       </header>
       <div class="outerBox">
+      <div class="grid">
         {horseInfoData.map((horse, index) => (
           <HorseItem 
           key={index}
@@ -48,6 +51,7 @@ function HorseShop() {
           breed={horse.breed}
           addToCart={() => handleAddToCart(horse.name)} />
         ))}
+        </div>
       </div>
     </div>
   );
