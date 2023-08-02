@@ -1,35 +1,53 @@
-import React from 'react';
-import horseImage from './images/horse.jpg';
+import React, { useState } from 'react';
 import './horse-shop.css';
+import horse1Image from './images/horse.jpg'
+
+const HorseItem = ({ name, breed, imageUrl, addToCart }) => {
+  return (
+    <div class="box">
+      <img class="horse" src={imageUrl} alt={name} />
+      <h2>{name}</h2>
+      <p>{breed}</p>
+      <button class="btnBuy" onClick={addToCart}>Add to Cart</button>
+    </div>
+  );
+};
 
 function HorseShop() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (name) => {
+    const newItem = {
+      name: name,
+    };
+
+    setCartItems([...cartItems, newItem]);
+  };
+  const cartTotal = cartItems.length;
+  const horseInfoData = [
+    { name: "Horse One", breed: "Quarter Horse", imageUrl: horse1Image }, 
+    { name: "Horse Two", breed: "Paint Horse", imageUrl: horse1Image },
+    { name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
+  ];
 
   return (
     <div>
       <header class="header">
         <h1>Welcome</h1>
         <p>This will be where horses can be bought</p>
-          <div class="cart"><button class="btn-cart">Cart (0) $0</button></div>
+          <div class="cart">
+            <button class="btnCart">Cart ({cartTotal})</button>
+            </div>
       </header>
-      <div class="outer-box">
-      <div class="box">
-        <img class="horse" src={horseImage} alt="horse"></img>
-        <h2>Horse Name</h2>
-        <p>Horse info</p>
-        <button class="buy-btn">Add to Cart</button>
-      </div>
-      <div class="box">
-      <img class="horse" src={horseImage} alt="horse"></img>
-        <h2>Horse Name</h2>
-        <p>Horse info</p>
-        <button class="buy-btn">Add to Cart</button>
-      </div>
-      <div class="box">
-      <img class="horse" src={horseImage} alt="horse"></img>
-        <h2>Horse Name</h2>
-        <p>Horse info</p>
-        <button class="buy-btn">Add to Cart</button>
-      </div>
+      <div class="outerBox">
+        {horseInfoData.map((horse, index) => (
+          <HorseItem 
+          key={index}
+          imageUrl={horse.imageUrl}
+          name={horse.name}
+          breed={horse.breed}
+          addToCart={() => handleAddToCart(horse.name)} />
+        ))}
       </div>
     </div>
   );

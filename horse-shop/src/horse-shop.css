@@ -17,7 +17,7 @@ body {
 .horse {
   width: 200px;
 }
-.outer-box {
+.outerBox {
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@ body {
   font-size: 16px;
   text-align: right;
 }
-.btn-cart {
+.btnCart {
   border: none;
   background-color: inherit;
   padding: 14px 28px;
@@ -48,11 +48,11 @@ body {
   cursor: pointer;
   display: inline-block;
 }
-.btn-cart:hover {
+.btnCart:hover {
   color: white;
   font-weight: bold;
 }
-.buy-btn {
+.btnBuy {
   color: black;
   font-size: 14px;
   background-color: #46a049;
@@ -60,7 +60,7 @@ body {
   border-radius: 10px;
   padding: 5px;
 }
-.buy-btn:hover {
+.btnBuy:hover {
   background-color: #417743;
   color: white;
 }
