@@ -1,15 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HorseShop from './horseshop';
 import ShoppingCart from './horseshopCart';
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <Router>
       <div>
-        <Routes> 
-          <Route path="/horseshop" element={<HorseShop />} /> 
-          <Route path="/horseshopCart" element={<ShoppingCart />} /> 
+        <Routes>
+          <Route path="/horseshop" element={<HorseShop setCartItems={setCartItems} />} />
+          <Route path="/horseshopCart" element={<ShoppingCart cartItems={cartItems} />} />
         </Routes>
       </div>
     </Router>
