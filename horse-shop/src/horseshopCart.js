@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import './horse-shop.css';
 
 const ShoppingCart = ({ cartItems }) => {
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
   return (
     <div>
       <header className="header">
@@ -22,6 +27,9 @@ const ShoppingCart = ({ cartItems }) => {
                   <h4>{item.name}</h4>
                   <p>{item.breed}</p>
                 </div>
+                 <div class="cartContentItemPrice">
+                    <p>{formatter.format(item.price)}</p>
+                  </div>
               </div>
             ))}
           </div>

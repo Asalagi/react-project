@@ -167,6 +167,18 @@ p {
 
 .cartContentItemText {
   align-items: left;
+  width: 50%;
+  background-color: #2548ba;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #c91d1d;
+}
+.cartContentItemPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  font-weight: bold;
   background-color: #2548ba;
   padding: 5px;
   border-radius: 10px;
