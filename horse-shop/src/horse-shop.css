@@ -101,7 +101,7 @@ p {
   background-color: #f1f1f1;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 0px solid black;
 }
 .btnShop {
   border: 1px solid #417743;
@@ -120,6 +120,7 @@ p {
 .summary {
   grid-column-start: 5;
   grid-column-end: 7;
+  height: fit-content;
   margin: 10px;
   background-color: #ffffff;
   border: 1px dashed rgb(192, 36, 36);
@@ -159,19 +160,24 @@ p {
 }
 
 .cartHorseCard {
+  background-color: white;
+  padding: 5px;
   display: flex;
   flex-wrap: wrap; 
   gap: 20px;
   justify-content: left; 
+  border-bottom: 1px dashed black;
+}
+.cartHorseCard:last-child {
+ border-bottom: none;
 }
 
 .cartContentItemText {
   align-items: left;
   width: 50%;
-  background-color: #2548ba;
+  background-color: white;
   padding: 5px;
-  border-radius: 10px;
-  border: 1px solid #c91d1d;
+  border-radius: 10px;;
 }
 .cartContentItemPrice {
   display: flex;
@@ -179,18 +185,17 @@ p {
   align-items: center;
   width: 20%;
   font-weight: bold;
-  background-color: #2548ba;
+  background-color: white;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid #c91d1d;
 }
 
 .cartContentItem {
   align-items: left;
-  background-color: #50834f;
+  background-color: white;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid #c91d1d;
+  border: 0px solid #c91d1d;
 }
 
 .backLink {
@@ -203,6 +208,4 @@ p {
   margin-left: 10px;
   width: 200px;
   height: 100px;
-  background-color: #ffffff;
-  border: 1px dashed rgb(192, 36, 36);
 }

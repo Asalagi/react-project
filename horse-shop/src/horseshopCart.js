@@ -7,6 +7,7 @@ const ShoppingCart = ({ cartItems }) => {
     style: 'currency',
     currency: 'USD',
   });
+  const cartTotal = cartItems.reduce((total, item) => total + item.price, 0);
 
   return (
     <div>
@@ -44,7 +45,7 @@ const ShoppingCart = ({ cartItems }) => {
             <h3>Cart Summary</h3>
           </div>
           <div class="summaryBody">
-            <p>({cartItems.length}) Items <br /> Total: $0</p>
+            <p>({cartItems.length}) Items <br /> Total: {formatter.format(cartTotal)}</p>
           </div>
         </div>
       </div>
