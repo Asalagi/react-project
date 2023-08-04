@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom';
 import './horse-shop.css';
 import horse1Image from './images/horse.jpg';
 
-const HorseItem = ({ id, name, breed, imageUrl, addToCart }) => {
+const HorseItem = ({ id, name, breed, price, imageUrl, addToCart }) => {
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
   return (
     <div className="box" id={id}>
       <img className="horse" src={imageUrl} alt={name} />
       <h2>{name}</h2>
       <p>{breed}</p>
+      <p>{formatter.format(price)}</p>
       <button className="btnBuy" onClick={addToCart}>Add to Cart</button>
     </div>
   );
@@ -21,11 +27,11 @@ function HorseShop({ cartItems, setCartItems }) {
 
   const cartTotal = cartItems.length;
   const horseInfoData = [
-    { id: 1, name: "Horse One", breed: "Quarter Horse", imageUrl: horse1Image },
-    { id: 2, name: "Horse Two", breed: "Paint Horse", imageUrl: horse1Image },
-    { id: 3, name: "Horse Three", breed: "Appaloosa", imageUrl: horse1Image },
-    { id: 4, name: "Horse Four", breed: "Appaloosa", imageUrl: horse1Image },
-    { id: 5, name: "Horse Five", breed: "Appaloosa", imageUrl: horse1Image },
+    { id: 1, name: "Horse One", breed: "Quarter Horse", price: 4000, imageUrl: horse1Image },
+    { id: 2, name: "Horse Two", breed: "Paint Horse", price: 4000, imageUrl: horse1Image },
+    { id: 3, name: "Horse Three", breed: "Appaloosa", price: 4000, imageUrl: horse1Image },
+    { id: 4, name: "Horse Four", breed: "Appaloosa", price: 4000, imageUrl: horse1Image },
+    { id: 5, name: "Horse Five", breed: "Appaloosa", price: 4000, imageUrl: horse1Image },
   ];
 
   return (
@@ -48,6 +54,7 @@ function HorseShop({ cartItems, setCartItems }) {
             imageUrl={horse.imageUrl}
             name={horse.name}
             breed={horse.breed}
+            price={horse.price}
             addToCart={() => handleAddToCart(horse)}
           />
         ))

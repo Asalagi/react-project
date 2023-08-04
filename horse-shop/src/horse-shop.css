@@ -12,6 +12,14 @@ body {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
 }
 
+h2, h4 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
 .horseCard {
   display: flex;
   flex-wrap: wrap; 
@@ -39,7 +47,6 @@ body {
 .outerBox {
   background-color: #ffffff;
   display: flex;
-  align-self: ;
   align-items: center;
   justify-content: center; 
   margin: 20px auto; 
@@ -87,8 +94,8 @@ body {
 /* Cart page css */
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background-color: #f1f1f1;
@@ -112,7 +119,7 @@ body {
 
 .summary {
   grid-column-start: 5;
-  grid-column-end: 6;
+  grid-column-end: 7;
   margin: 10px;
   background-color: #ffffff;
   border: 1px dashed rgb(192, 36, 36);
@@ -138,6 +145,41 @@ body {
   background-color: #ffffff;
   border: 1px dashed rgb(192, 36, 36);
 }
+.cartContentTitle {
+  margin: 0;
+  padding: 5px;
+  background-color: rgb(193, 188, 188);
+  border-bottom: 1px dashed rgb(192, 36, 36);;
+}
+.cartImage {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0; 
+}
+
+.cartHorseCard {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: left; 
+}
+
+.cartContentItemText {
+  align-items: left;
+  background-color: #2548ba;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #c91d1d;
+}
+
+.cartContentItem {
+  align-items: left;
+  background-color: #50834f;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #c91d1d;
+}
 
 .backLink {
   grid-column-start: 1;
@@ -146,6 +188,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
   width: 200px;
   height: 100px;
   background-color: #ffffff;
