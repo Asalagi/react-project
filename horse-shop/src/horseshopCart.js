@@ -11,9 +11,9 @@ const ShoppingCart = ({ cartItems }) => {
 
   return (
     <div>
-      <header className="header">
-        <h1>Cart</h1>
-        <p>These are the horses you have added to your cart.</p>
+      <header class="header">
+        <h1>Wishlist Horse Cart</h1>
+        <p>The perfect horse is waiting for you.</p>
       </header>
       <div class="container">
         <div class="cartContent">
@@ -42,7 +42,7 @@ const ShoppingCart = ({ cartItems }) => {
         </div>
         <div class="summary">
           <div class="summaryTitle">
-            <h3>Cart Summary</h3>
+            <h2>Cart Summary</h2>
           </div>
           <div class="summaryBody">
             <p>({cartItems.length}) Items <br /> Total: {formatter.format(cartTotal)}</p>
