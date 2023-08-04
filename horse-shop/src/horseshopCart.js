@@ -10,13 +10,18 @@ const ShoppingCart = ({ cartItems }) => {
         <p>These are the horses you have added to your cart.</p>
       </header>
         <div class="container">
-        <Link to="/horseshop"><button class="btnShop">Back to Shop</button></Link>
+      <div class="cartContent">
       <h1>Cart</h1>
       <ul>
         {cartItems.map((item) => (
           <li key={item.id}>{item.name}</li>
         ))}
       </ul>
+      </div>
+      <div class="backLink">
+        <Link to="/horseshop"><button class="btnShop">Back to Shop</button>
+        </Link>
+      </div>
       <div class="summary">
         <div class="summaryTitle"><h3>Cart Summary</h3></div>
         <div class="summaryBody"><p>({cartItems.length}) Items <br />

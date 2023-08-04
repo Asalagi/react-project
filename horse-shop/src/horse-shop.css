@@ -39,6 +39,7 @@ body {
 .outerBox {
   background-color: #ffffff;
   display: flex;
+  align-self: ;
   align-items: center;
   justify-content: center; 
   margin: 20px auto; 
@@ -85,12 +86,15 @@ body {
 
 /* Cart page css */
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   background-color: #f1f1f1;
   padding: 5px;
   border-radius: 10px;
   border: 1px solid black;
-  align-items: left;
 }
 .btnShop {
   border: 1px solid #417743;
@@ -98,7 +102,6 @@ body {
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
-  display: inline-block;
 }
 
 .btnShop:hover {
@@ -108,28 +111,43 @@ body {
 }
 
 .summary {
+  grid-column-start: 5;
+  grid-column-end: 6;
   margin: 10px;
   background-color: #ffffff;
   border: 1px dashed rgb(192, 36, 36);
-  width: 20%;
 }
+
 .summaryTitle {
   margin: 0;
   padding: 5px;
   background-color: rgb(193, 188, 188);
   border-bottom: 1px dashed rgb(192, 36, 36);;
 }
+
 .summaryBody {
   background-color: #ffffff;
   padding: 10px;
   border: 0px solid black;
 }
 
-.container {
+.cartContent {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px dashed rgb(192, 36, 36);
+}
+
+.backLink {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
   display: flex;
-  background-color: #f1f1f1;
-  padding: 5px;
-  border-radius: 10px;
-  border: 1px solid black;
-  align-items: left;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  background-color: #ffffff;
+  border: 1px dashed rgb(192, 36, 36);
 }
