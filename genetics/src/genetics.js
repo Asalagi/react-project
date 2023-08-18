@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import "./horse-shop.css";
+import "./styles/genetics.css";
 
 function Genetics() {
     const A = "A"
