@@ -5,8 +5,10 @@ function HeartHorse() {
 
     return (
         <div className="wrapper">
-            <div className="one">links go here</div>
-            <div className="three">Just an accent box</div>
+            <div className="one"><h1 className="linkContent">Welcome</h1>
+            <p className="linkLeftSide">
+                </p></div>
+            <div className="three"></div>
             <div className="four"><h1 className="mainContent">Main Content here</h1></div>
             <div className="two">Log in stuff to go here</div>
             <div className="five">Secondary links go here</div>
