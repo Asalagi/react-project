@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/genetics.css';
 import Genetics from './genetics';
+import HeartHorse from './heart-horse';
 
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
 <Router>
   <Routes>
   <Route path="/genetics" element={<Genetics />} />
+  <Route path="/heart-horse" element={<HeartHorse />} />
   </Routes>
 </Router>
   );

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import "./styles/genetics.css";
 
 function Genetics() {
     const A = "A"
